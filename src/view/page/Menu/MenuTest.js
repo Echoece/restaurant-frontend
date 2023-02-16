@@ -1,3 +1,4 @@
+import Button from '@mui/material/Button';
 import './menu.css';
 import React, {useEffect, useState} from 'react';
 import {getAllFood} from "../../../service/food/foodService";
@@ -68,30 +69,36 @@ function MenuTest() {
             <h1 className='text-center' style={{color:'#e1cfcf'}}>Our Menu</h1>
             <div className="menu-categories">
                 <span className='menu-category' onClick={(event) => {
-                    setFilteredFood(null)}}>All Category</span>
+                    setFilteredFood(null)}}><Button variant="contained" className="my-2" size="large"><h3>All Category</h3></Button></span>
                 <br/>
                 <hr/>
-                {allCategories.map( (element, index)  => <span key={index} className='menu-category' onClick={(event)=>handleCategoryFilter(index, event)}> <button className="btn btn-danger my-2">{element}</button></span>)}
+                {allCategories.map( (element, index)  => <span key={index} className='menu-category' onClick={(event)=>handleCategoryFilter(index, event)}> <Button variant="contained" className="my-2" size="large"><h3>{element}</h3></Button></span>)}
                 <hr/>
             </div>
 
 
-            <div className="item-cards">
+            <div className="item-cards col-8">
                 {tempFood.map(element =>
-                    <div key={element.id} className="item-card">
-                        <h3 style={{whiteSpace:'initial'}}>{element.name}</h3>
-                        <img src={images[Math.floor(Math.random() * 6)]} alt="" height='150px' width='150px' style={{marginBottom: '10px'}}/>
+                    <div key={element.id} className="item-card d-flex" >
+                        <div>                        
+                            <img src={images[Math.floor(Math.random() * 6)]} alt="" height='150px' width='150px' style={{marginBottom: '10px'}}/>
+                        </div>
+                        <div className="mx-4">
+                        <h3 className='h3' style={{whiteSpace:'initial'}}>{element.name}</h3>
+                        
 
                         {!element.itemProperty.length ?
-                            <h3>Price : {element.price} $</h3>
+                            <h3 className='h4 text-warning'>Price : {element.price} $</h3>
                             :
-                            <h3>
+                            <h3 className='h4 text-warning'>
                                 {element.itemProperty.map(flavour =>
                                 <span><b>{flavour.name}</b> : {flavour.price}$ </span>
                             )}
                             </h3>
                         }
-                        <p className='item-description'>{element.description}</p>
+                        <p className='item-description h5 text-light'>{element.description}</p>
+                        </div>
+                        
                     </div>
                 )}
 

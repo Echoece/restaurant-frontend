@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css";
+import i from "../../nav/new/FamousChicken.png";
 import {
     FaFacebookSquare,
     FaInstagramSquare,
@@ -12,6 +13,11 @@ const Footer = () => {
             <footer className="footer">
                 <div className="container">
                     <div className="row">
+
+                    <div className="footer-col">
+                        <img src={i} className="col-8 my-4 ms-5"  alt="Responsive image" />  
+ 
+                        </div>
 
                         <div className="footer-col">
                             <h4>About</h4>
@@ -44,7 +50,7 @@ const Footer = () => {
 
                         <div className="footer-col">
                             <h4>Follow Us</h4>
-                                <div className="social-links">
+                                <div className="social-links d-flex">
                                     <li><a href="https://www.facebook.com/channel/UCwfaAHy4zQUb2APNOGXUCCA" target="_thapa"><FaFacebookSquare className="facebook" />FaceBook</a></li>
                                     <li><a href="https://www.instagram.com/thapatechnical/" target="_thapa"><FaInstagramSquare className="instagram" />Instagram</a></li>
                                     <li><a href="https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA" target="_thapa"><FaYoutubeSquare className="youtube" />YouTube</a></li>

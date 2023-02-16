@@ -4,7 +4,6 @@ class Profile extends Component {
     render() {
         return (
             <div>
-                profile user
             </div>
         );
     }

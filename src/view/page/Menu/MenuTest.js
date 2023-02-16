@@ -71,7 +71,7 @@ function MenuTest() {
                     setFilteredFood(null)}}>All Category</span>
                 <br/>
                 <hr/>
-                {allCategories.map( (element, index)  => <span key={index} className='menu-category' onClick={(event)=>handleCategoryFilter(index, event)}> {element}</span>)}
+                {allCategories.map( (element, index)  => <span key={index} className='menu-category' onClick={(event)=>handleCategoryFilter(index, event)}> <button className="btn btn-danger my-2">{element}</button></span>)}
                 <hr/>
             </div>
 

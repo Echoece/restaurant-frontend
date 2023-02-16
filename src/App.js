@@ -19,7 +19,7 @@ function App() {
 
     return (
             <BrowserRouter>
-                <ToastContainer/>
+                {/* <ToastContainer/> */}
                 <Routes>
                     <Route path = "/" element = {< Container />}>
                         <Route path="/" element = {< HomeComponent />}/>

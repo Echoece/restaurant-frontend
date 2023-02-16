@@ -14,7 +14,7 @@ const Navbar = () => {
     return(
         <>
         
-            <nav className="main-nav" >
+            <nav className="main-nav sticky-top" >
             {/* 1st logo */}
                 <div  className="logo mx-5 pb-2"> 
                     <img src={i} className="col-4 my-4 ms-5"  alt="Responsive image" />             
@@ -24,7 +24,6 @@ const Navbar = () => {
                 <div className ={ showMediaIcons ? "menu-link mobile-menu-link" : "menu-link"}>
                     <ul className="mx-5 pb-2">
 
-              
                     <Button variant="contained" color="error"><li>
                             <a><NavLink  to="/">Home</NavLink></a>
                         </li></Button>
@@ -37,7 +36,6 @@ const Navbar = () => {
                         <Button variant="contained" color="error"><li>
                             <a><NavLink  to="/about">About Us</NavLink></a>
                         </li></Button>
-                   
 
                         
                         
@@ -66,7 +64,7 @@ const Navbar = () => {
                         </ul>
                     }
                     {user &&
-                        <ul className="mx-5 pb-2 ">
+                        <ul className="mx-5 pb-2 col-6 col-xl-12 ">
 
                         <ButtonGroup variant="outlined" aria-label="outlined primary button group">
                             <Button>

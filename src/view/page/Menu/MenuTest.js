@@ -9,6 +9,8 @@ import d from './items/4.jpg';
 import e from './items/5.jpg';
 import f from './items/6.jpg';
 import g from './items/7.jpg';
+import Avatar from '@mui/material/Avatar';
+
 
 function MenuTest() {
     const [food, setFood] = useState(null);
@@ -79,9 +81,9 @@ function MenuTest() {
 
             <div className="item-cards col-8">
                 {tempFood.map(element =>
-                    <div key={element.id} className="item-card d-flex" >
+                    <div key={element.id} className="item-card" >
                         <div>                        
-                            <img src={images[Math.floor(Math.random() * 6)]} alt="" height='150px' width='150px' style={{marginBottom: '10px'}}/>
+                        <Avatar alt="" src={images[Math.floor(Math.random() * 6)]} height='150px' width='150px' style={{marginBottom: '10px'}}sx={{ width: 150, height: 150 }}/>
                         </div>
                         <div className="mx-4">
                         <h3 className='h3' style={{whiteSpace:'initial'}}>{element.name}</h3>

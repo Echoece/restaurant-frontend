@@ -5,6 +5,7 @@ import './carousal.css'
 import a from './1.jpg'
 import b from './2.jpg'
 import c from './3.jpg'
+import { width } from '@mui/system';
 
 const CarousalSlider = () => {
     const items = [
@@ -24,10 +25,10 @@ const CarousalSlider = () => {
     return (
             <Carousel fade interval={1500}>
                 <Carousel.Item>
-                    <img
+                    <img 
                         className="d-block w-100"
                         src={a}
-                        alt="First slide"
+                        alt="First slide"   
                     />
                 </Carousel.Item>
 

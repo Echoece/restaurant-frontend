@@ -54,7 +54,8 @@ const Navbar = () => {
                         <ul>
                             <li>
                                 <a><NavLink  to="/profile">
-                                    {user.sub.charAt(0).toUpperCase() + user.sub.slice(1)}
+                                    {console.log(user)}
+                                    {user.sub.charAt(0).toUpperCase() + user.sub.slice(1).substring(0, user.sub.slice(1).indexOf('@'))}
                                 </NavLink></a>
                             </li>
                             <li>

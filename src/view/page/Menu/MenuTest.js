@@ -1,3 +1,4 @@
+import Button from '@mui/material/Button';
 import './menu.css';
 import React, {useEffect, useState} from 'react';
 import {getAllFood} from "../../../service/food/foodService";
@@ -71,7 +72,7 @@ function MenuTest() {
                     setFilteredFood(null)}}>All Category</span>
                 <br/>
                 <hr/>
-                {allCategories.map( (element, index)  => <span key={index} className='menu-category' onClick={(event)=>handleCategoryFilter(index, event)}> <button className="btn btn-danger my-2">{element}</button></span>)}
+                {allCategories.map( (element, index)  => <span key={index} className='menu-category' onClick={(event)=>handleCategoryFilter(index, event)}> <Button variant="contained" className="my-2">{element}</Button></span>)}
                 <hr/>
             </div>
 

@@ -3,6 +3,9 @@ import "./Navbar.css";
 import { GiHamburgerMenu } from "react-icons/gi"
 import {getCurrentUser} from "../../../../service/auth/authService";
 import {NavLink} from "react-router-dom";
+import i from './FamousChicken.png';
+import Button from '@mui/material/Button';
+import ButtonGroup from '@mui/material/ButtonGroup';
 
 const Navbar = () => {
     const [showMediaIcons, setShowMediaIcons] = useState(false);
@@ -10,30 +13,36 @@ const Navbar = () => {
 
     return(
         <>
-            <nav className="main-nav">
+        
+            <nav className="main-nav" >
             {/* 1st logo */}
-                <div className="logo">
-                    <h2>
-                        <span>F</span>amous
-                        <span>C</span>hicken
-                    </h2>
+                <div  className="logo mx-5 pb-2"> 
+                    <img src={i} className="col-4 my-4 ms-5"  alt="Responsive image" />             
                 </div>
                 {/* 2nd Menu */}
 
                 <div className ={ showMediaIcons ? "menu-link mobile-menu-link" : "menu-link"}>
-                    <ul>
-                        <li>
+                    <ul className="mx-5 pb-2">
+
+                    <ButtonGroup variant="contained" aria-label="outlined primary button group" color="error">
+                    <Button><li>
                             <a><NavLink  to="/">Home</NavLink></a>
-                        </li>
-                        <li>
+                        </li></Button>
+                    <Button><li>
                             <a><NavLink  to="/menu">Menu</NavLink></a>
-                        </li>
-                        <li>
+                        </li></Button>
+                    <Button><li>
                             <a><NavLink  to="/contact">Contact</NavLink></a>
-                        </li>
-                        <li>
+                        </li></Button>
+                        <Button><li>
                             <a><NavLink  to="/about">About Us</NavLink></a>
-                        </li>
+                        </li></Button>
+                    </ButtonGroup>
+
+                        
+                        
+                        
+                        
                     </ul>
                 </div>
 
@@ -41,26 +50,41 @@ const Navbar = () => {
 
                 <div className="extra-links">
                     {!user &&
-                        <ul>
-                            <li>
+                        <ul className="mx-5 pb-2 col-6 col-xl-12">
+
+                        <ButtonGroup variant="outlined" aria-label="outlined primary button group">
+                            <Button><li>
                                 <a><NavLink  to="/login">Login</NavLink></a>
-                            </li>
-                            <li>
-                                <a > <NavLink  to="/register">Register</NavLink></a>
-                            </li>
+                            </li></Button>
+
+                            <Button><li>
+                                <a><NavLink  to="/register">Register</NavLink></a>
+                            </li></Button>
+                        </ButtonGroup>
+                            
+                            
                         </ul>
                     }
                     {user &&
-                        <ul>
-                            <li>
-                                <a><NavLink  to="/profile">
+                        <ul className="mx-5 pb-2 ">
+
+                        <ButtonGroup variant="outlined" aria-label="outlined primary button group">
+                            <Button>
+                                <li>
+                                    <a><NavLink  to="/profile">
                                     {console.log(user)}
                                     {user.sub.charAt(0).toUpperCase() + user.sub.slice(1).substring(0, user.sub.slice(1).indexOf('@'))}
-                                </NavLink></a>
-                            </li>
-                            <li>
-                                <a > <NavLink  to="/logout">Logout</NavLink></a>
-                            </li>
+                                    </NavLink></a>
+                                </li>
+                            </Button>
+
+                            <Button> 
+                                <li>
+                                    <a > <NavLink  to="/logout">Logout</NavLink></a>
+                                </li>
+                            </Button>
+                        </ButtonGroup>
+
                         </ul>
                     }
                     {/* Hamburger Menu */}

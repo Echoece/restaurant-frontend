@@ -13,11 +13,6 @@ class RegisterForm extends Form {
     }
 
     schema = {
-        username: Joi
-            .string()
-            .required()
-            .label('Username'),
-
         password: Joi
             .string()
             .required()

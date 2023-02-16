@@ -25,16 +25,16 @@ const Navbar = () => {
                     <ul className="mx-5 pb-2">
 
                     <ButtonGroup variant="contained" aria-label="outlined primary button group" color="error">
-                    <Button><li>
+                    <Button variant="contained"><li>
                             <a><NavLink  to="/">Home</NavLink></a>
                         </li></Button>
-                    <Button><li>
+                    <Button variant="contained"><li>
                             <a><NavLink  to="/menu">Menu</NavLink></a>
                         </li></Button>
-                    <Button><li>
+                    <Button variant="contained"><li>
                             <a><NavLink  to="/contact">Contact</NavLink></a>
                         </li></Button>
-                        <Button><li>
+                        <Button variant="contained"><li>
                             <a><NavLink  to="/about">About Us</NavLink></a>
                         </li></Button>
                     </ButtonGroup>

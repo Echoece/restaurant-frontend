@@ -24,20 +24,20 @@ const Navbar = () => {
                 <div className ={ showMediaIcons ? "menu-link mobile-menu-link" : "menu-link"}>
                     <ul className="mx-5 pb-2">
 
-                    <ButtonGroup variant="contained" aria-label="outlined primary button group" color="error">
-                    <Button variant="contained"><li>
+              
+                    <Button variant="contained" color="error"><li>
                             <a><NavLink  to="/">Home</NavLink></a>
                         </li></Button>
-                    <Button variant="contained"><li>
+                    <Button variant="contained" color="error"><li>
                             <a><NavLink  to="/menu">Menu</NavLink></a>
                         </li></Button>
-                    <Button variant="contained"><li>
+                    <Button variant="contained" color="error"><li>
                             <a><NavLink  to="/contact">Contact</NavLink></a>
                         </li></Button>
-                        <Button variant="contained"><li>
+                        <Button variant="contained" color="error"><li>
                             <a><NavLink  to="/about">About Us</NavLink></a>
                         </li></Button>
-                    </ButtonGroup>
+                   
 
                         
                         
